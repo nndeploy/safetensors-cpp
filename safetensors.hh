@@ -3808,13 +3808,14 @@ bool parse_tensor(const std::string &name, const ::minijson::value &v,
       // the header. So ignore data_offsets
       if (data_offsets_found) {
         // TODO: make this warn instead of err?
-        if (err) {
+        /*if (err) {
           (*err) +=
               "`" + name +
               "` is empty tensors(tensors with 1 dimension being 0), and no "
               "data in databuffer, but `data_offsets` item is provided.\n";
         }
-        return false;
+        return false;*/
+        ;
       }
     } else {
       if (!data_offsets_found) {
